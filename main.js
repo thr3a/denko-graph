@@ -6,7 +6,7 @@ $(function() {
 			title : {text: "AP比較表"},
 			xAxis : {
 				title: {text: "レベル"},
-				min:0,
+				min:1,
 				max:80,
 				plotLines: [{
 					value: 50,
@@ -22,7 +22,7 @@ $(function() {
 		});
 		var ap_chart = $('#ap_graph').highcharts();
 		$.each(json, function(i, val){
-			ap_chart.addSeries({name: val.name, data: val.AP, visible:false});
+			ap_chart.addSeries({name: val.name, data: val.AP, visible:false,pointStart: 1});
 		});
 		// HPのグラフ設定
 		$('#hp_graph').highcharts({
@@ -45,7 +45,7 @@ $(function() {
 		});
 		var hp_chart = $('#hp_graph').highcharts();
 		$.each(json, function(i, val){
-			hp_chart.addSeries({name: val.name, data: val.HP, visible:false});
+			hp_chart.addSeries({name: val.name, data: val.HP, visible:false,pointStart: 1});
 		});
 	});
 });
