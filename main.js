@@ -29,7 +29,7 @@ $(function() {
 			title : {text: "HP比較表"},
 			xAxis : {
 				title: {text: "レベル"},
-				min:0,
+				min:1,
 				max:80,
 				plotLines: [{
 					value: 50,
